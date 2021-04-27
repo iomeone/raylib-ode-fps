@@ -1,6 +1,6 @@
 # Setup
 cmake_minimum_required(VERSION 3.17)
-project(ExampleRaylibC)
+project(RaylibOdeFps)
 include(CTest)
 include(FetchContent)
 set(FETCHCONTENT_QUIET 0)
@@ -21,7 +21,18 @@ FetchContent_Declare(
   GIT_TAG        master)
 set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE) # don't build the supplied examples
 
-FetchContent_MakeAvailable(unity raylib)
+FetchContent_Declare(
+  ode
+  GIT_REPOSITORY https://bitbucket.org/odedevs/ode.git
+  GIT_SHALLOW    TRUE
+  GIT_PROGRESS   TRUE
+  GIT_TAG        master)
+set(ODE_WITH_DEMOS OFF CACHE BOOL "" FORCE)
+set(ODE_WITH_TESTS OFF CACHE BOOL "" FORCE)
+set(ODE_DOUBLE_PRECISION OFF CACHE BOOL "" FORCE)
+string(APPEND CMAKE_CXX_FLAGS " -fPIC")
+
+FetchContent_MakeAvailable(unity raylib ode)
 
 # Output directory structure configuration.
 set(EXECUTABLE_OUTPUT_PATH "${PROJECT_BINARY_DIR}/bin")

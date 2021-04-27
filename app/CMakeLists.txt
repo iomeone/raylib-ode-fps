@@ -5,15 +5,12 @@ add_executable(
 
 target_link_libraries(
   example_app
-  example
+  raylib
+  rlights
+  ODE
 )
 
 add_dependencies(
   example_app
   resources
-)
-
-target_link_libraries(
-  example_app
-  raylib
 )

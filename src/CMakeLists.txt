@@ -1,5 +1,11 @@
-add_library(example STATIC
-  example.c
+add_library(
+  rlights STATIC
+  rlights.c
+)
+
+target_link_libraries(
+  rlights
+  raylib
 )
 
 ###################################################################

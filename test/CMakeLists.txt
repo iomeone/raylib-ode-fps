@@ -2,20 +2,15 @@
 
 # 1. Declare the test file
 set(Tests
-  runner
-  runner2)
+  runner)
 
 # 2. Declare dependencies of each test file
 set(runner_deps
-  example)
-
-set(runner2_deps
   "")
 
 # 3. Add dependencies to a list, need to be in the same order as item 1
 set(Dependencies
-  runner_deps
-  runner2_deps)
+  runner_deps)
 
 ###################################################################
 
