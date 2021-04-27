@@ -1,6 +1,6 @@
 # Raylib + ODE = FPS [![CI](https://github.com/nopsteam/c-cmake-raylib-boilerplate/actions/workflows/main.yml/badge.svg)](https://github.com/nopsteam/c-cmake-raylib-boilerplate/actions/workflows/main.yml)
 
-An physics based FPS made with [Raylib](https://github.com/raysan5/raylib) and [ODE](https://bitbucket.org/odedevs/ode/src/master)
+An physics based FPS made with [Raylib](https://github.com/raysan5/raylib) and [ODE](https://bitbucket.org/odedevs/ode/src/master)  
 ![Example](./raylib-ode-fps.gif)
 
 ## Compiling / Building
