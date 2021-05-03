@@ -424,9 +424,6 @@ int main(void)
     lights[3] = CreateLight(LIGHT_POINT, (Vector3){ -25,25,25 }, Vector3Zero(),
                     BLUE, shader);
 
-    // Set camera mode
-    SetCameraMode(camera, CAMERA_CUSTOM);
-
     // Set our game to run at 60 frames-per-second
     SetTargetFPS(60);
 
@@ -469,8 +466,6 @@ int main(void)
         if (IsKeyPressed(KEY_R)) { lights[1].enabled = !lights[1].enabled; UpdateLightValues(shader, lights[1]);}
         if (IsKeyPressed(KEY_G)) { lights[2].enabled = !lights[2].enabled; UpdateLightValues(shader, lights[2]);}
         if (IsKeyPressed(KEY_B)) { lights[3].enabled = !lights[3].enabled; UpdateLightValues(shader, lights[3]);}
-
-        UpdateCamera(&camera);              // Update camera
 
         // check for collisions
         dSpaceCollide(space, 0, &nearCallback);
